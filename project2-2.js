@@ -20,7 +20,7 @@ addcart[0].addEventListener('click', function(event){
     if (price[0].innerText == '$15') {
         matchpricemodal.innerText = price[0].innerText;
         modalproductname.innerText = itemstitle[0].innerText;
-        innerimgsection.src = "/Users/mauriceaugust/Documents/Project 2/Sole-Revive-PDP-1.jpeg";
+        innerimgsection.src = "Sole-Revive-PDP-1.jpeg";
     }
 
  })
@@ -29,35 +29,35 @@ addcart[1].addEventListener('click', function(event){
   if (price[1].innerText == '$10') {
     matchpricemodal.innerText = price[1].innerText;
     modalproductname.innerText = itemstitle[1].innerText;
-    innerimgsection.src = "/Users/mauriceaugust/Documents/Project 2/Wipes.jpeg";
+    innerimgsection.src = "Wipes.jpeg";
   }
  })
 addcart[2].addEventListener('click', function(event){
   if (price[2].innerText == '$15') {
    matchpricemodal.innerText = price[2].innerText;
    modalproductname.innerText = itemstitle[2].innerText;
-   innerimgsection.src = "/Users/mauriceaugust/Documents/Project 2/Cleaningrag.jpeg";
+   innerimgsection.src = "Cleaningrag.jpeg";
   }
 })
 addcart[3].addEventListener('click', function(event){
   if (price[3].innerText == '$30') {
     matchpricemodal.innerText = price[3].innerText;
     modalproductname.innerText = itemstitle[3].innerText;
-    innerimgsection.src = "/Users/mauriceaugust/Documents/Project 2/pwtw-bleach-1.jpeg";
+    innerimgsection.src = "pwtw-bleach-1.jpeg";
   }
  })
 addcart[4].addEventListener('click', function(event){
   if (price[4].innerText == '$20') {
    matchpricemodal.innerText = price[4].innerText;
    modalproductname.innerText = itemstitle[4].innerText;
-   innerimgsection.src = "/Users/mauriceaugust/Documents/Project 2/Detergent.jpeg";
+   innerimgsection.src = "Detergent.jpeg";
  }
 })
 addcart[5].addEventListener('click', function(event){
   if (price[5].innerText == '$15') {
     matchpricemodal.innerText = price[5].innerText;
     modalproductname.innerText = itemstitle[5].innerText;
-    innerimgsection.src = "/Users/mauriceaugust/Documents/Project 2/sneaker-laundry-bag.jpeg";
+    innerimgsection.src = "sneaker-laundry-bag.jpeg";
   }
  })
 
