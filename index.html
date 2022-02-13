@@ -1,0 +1,866 @@
+# microcredential
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="Project2-2.css" type="text/css">
+
+    <title></title>
+    <style media="screen" type="text/css">
+      @font-face {
+        src: url("/Users/mauriceaugust/Downloads/vampire-calligraphy-font/VampireCalligraphy-GgoA.ttf");
+        font-family: vampire;
+      }
+
+      *{
+        box-sizing: border-box;
+        --primary-color: #fe7e6d;
+        --secondary-color: #040303;
+        --main-font: "GTWalsheim","Arial";
+        font-family: var(--main-font);
+      }
+
+        html{
+          height: 100%;
+          scroll-behavior: smooth;
+        }
+
+        body{
+          background-color: white;
+          margin-left: 0%;
+          margin-right: 0%;
+          margin-bottom: 0%;
+          margin-top: 0%;
+          height: 100%;
+        }
+        .mainheaderdiv{
+          /* border: solid black; */
+          width: 100%;
+          height: 10%;
+          background-color: white;
+          position: sticky;
+          z-index: 20;
+          top: 0;
+        }
+
+        .mainheaderdiv div{
+          width: 33.33%;
+          height: 100%;
+          display: inline-block;
+          /* border: solid black; */
+
+          float: left;
+        }
+
+        .col:nth-child(2){
+          text-align: center;
+        }
+
+        .col a{
+          margin-top: 5%;
+          /* border: solid black; */
+          text-decoration: none;
+          display: inline-block;
+          font-family: var(--main-font);
+          color: white;
+          font-size: 1.5em;
+        }
+
+
+        #col1 a{
+          /* border: solid black; */
+          font-size: 1.1em;
+          margin-right: 2%;
+          color: black;
+        }
+
+        .headerlinks:hover{
+          color: var(--primary-color) !important;
+
+        }
+        #col2text{
+          /* border: solid black; */
+          margin-left: 20%;
+          color: black;
+        }
+
+        .headerlinks:nth-child(1){
+          margin-left: 10%;
+        }
+
+        .imagecontainer{
+          /* border: solid black; */
+          display: inline-block;
+          width: 18%;
+          height: 50%;
+          margin-left: 0%;
+          text-align: left;
+        }
+        .imagecontainer img{
+          width: 40%;
+          height: 100%;
+          /* border: solid black; */
+          animation-name: rotateimg;
+          animation-duration: 1s;
+          animation-fill-mode: forwards;
+          transform: scaleX(-1);
+          background: transparent;
+        }
+        .usericoncont{
+          width: 5.5%;
+          height: 100%;
+          /* border: solid black; */
+          display: inline-block;
+          margin-right: 0%;
+          margin-left: 3%;
+          margin-top: 5%;
+        }
+        .usericoncont img{
+          width: 100%;
+          height: 30%;
+        }
+
+        .usericoncont:nth-child(1){
+          margin-left: 60%;
+        }
+        h1{
+          text-align: center;
+        }
+        /* .magicwandheadcont{
+          position: relative;
+          border: solid black;
+          float: right;
+          margin-right: auto;
+          margin-left: auto;
+          width: 60%;
+          height: 50%;
+        } */
+
+        /* .logocont{
+          border: solid black;
+          height: 100%;
+          width: 5%;
+          float: right;
+          position: relative;
+          margin-right: 0%;
+        } */
+
+        @keyframes rotateimg {
+          0%{transform: scale(130%);transform: rotate(20deg);}
+          100%{transform: rotate(10deg); transform: scale(90%);}
+        }
+        .slideshow{
+          overflow: hidden;
+          width: 100%;
+          height: 4%;
+          background-color: black;
+          /* position: fixed; */
+        }
+        .slidewrapper{
+          width: 300%;
+          height: 100%;
+          animation-name: slidewrap;
+          animation-duration: 12s;
+          animation-iteration-count: infinite;
+        }
+        .slide{
+          width: 33.3%;
+          height: 100%;
+          text-align: center;
+          float: left;
+          background-color: purple;
+        }
+        .slide p{
+          font-size: 1em;
+          font-weight: bold;
+          color: white;
+          margin-top: 0.5%;
+        }
+        #slide1{
+          background-color: black;
+
+        }
+        #slide2{
+          background-color: #79018C;
+        }
+        #slide3{
+          background-color: #4C0070;
+        }
+        @keyframes slidewrap {
+          0% {margin-left: 0px;}
+          10% {margin-left: 0px;}
+          30% {margin-left: -100%;}
+          40% {margin-left: -100%;}
+          60% {margin-left: -200%;}
+          70% {margin-left: -200%;}
+        }
+        .mainimg{
+          height: 1000px;
+          width: 100%;
+          /* background-color: black; */
+          margin-left: 0%;
+          position: relative;
+          margin-bottom: 4%;
+        }
+        .mainimg img{
+          width: 100%;
+          height: 100%;
+
+        }
+        .imgtext{
+          border: solid black;
+          /* border-radius: 20px; */
+          width: 30%;
+          position: absolute;
+          left: 35%;
+          top: 40%;
+          color: white;
+          font-size: 1.1em;
+          background-color: black;
+          padding: 2%;
+          text-align: center;
+          font-family: var(--main-font);
+        }
+        .imgtext:hover{
+          background-color: var(--primary-color);
+          color: black;
+        }
+        .anotherimg{
+          width: 95%;
+          height: 1000px;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 3%;
+          /* background-color: black; */
+          position: relative;
+          text-align: center;
+        }
+        .anotherimg img{
+          width: 100%;
+          height: 100%;
+        }
+
+        .imgtext2{
+          border: solid black;
+          /* border-radius: 20px; */
+          width: 30%;
+          position: absolute;
+          z-index: 2;
+          left: 35%;
+          bottom: 40%;
+          color: black;
+          font-size: 1.1em;
+          background-color: white;
+          padding: 2%;
+          font-family: var(--main-font);
+        }
+        .imgtext2:hover{
+          background-color: var(--primary-color);
+          color: black;
+        }
+        .overlay{
+          background-image: linear-gradient(to right, grey, black);
+          filter: opacity(0.4);
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          bottom: 0%;
+          z-index: 1;
+        }
+        .coreproduct h1{
+          text-align: left;
+        }
+        .coreproduct div{
+
+          width: 100%;
+          height: 500px;
+          display: inline-block;
+          background-color: ;
+
+        }
+        .corefig1, .corefig2, .corefig3{
+          width: 100%;
+          height: 100%;
+          display: inline-block;
+        }
+        .core1{
+          background-color: black;
+        }
+        .core2{
+          background-color: grey;
+        }
+        .corefig1 img{
+          width: 33%;
+          height: 90%;
+          display: inline-block;
+        }
+        .coreimg2{
+          margin-left: 0.25%;
+        }
+        .coreimg3{
+          float: right;
+        }
+        .corefig2 img{
+          width: 33%;
+          height: 90%;
+          display: inline-block;
+        }
+        hr{
+          background-color: black;
+          height: 1px;
+          border: ;
+        }
+        .corefig1 p{
+          color: white;
+          text-align: left;
+        }
+        .mainimgcontainer{
+          /* border: solid purple; */
+          height: 1000px;
+        }
+        .cleaners{
+          text-align: center;
+          font-family: var(--main-font);
+          font-size: 2.5em;
+          color: black;
+          /* border: solid black; */
+        }
+        .cleanerp{
+          text-align: center;
+          color: black;
+          font-family: var(--main-font);
+          /* border: solid black; */
+        }
+        .space1{
+          height: 50%;
+          /* border: solid black; */
+          /* padding-bottom: 4%; */
+          margin-bottom: 2%;
+        }
+        .space2{
+          height: 50%;
+          /* border: solid red; */
+        }
+        .space1 figure{
+          width: 32.5%;
+          height: 75%;
+          background-color: grey;
+          display: inline-block;
+          margin: 0%;
+          /* border: solid black; */
+          text-align: center;
+        }
+
+        #too{
+          margin-left: 1%;
+        }
+        #three{
+          float: right;
+        }
+        .space2 figure{
+          width: 32.5%;
+          height: 75%;
+          background-color: grey;
+          display: inline-block;
+          margin: 0%;
+          /* border: solid black; */
+          text-align: center;
+        }
+        #s2f3{
+          float: right;
+        }
+        #s2f2{
+          margin-left: 1%;
+        }
+        .imgholder1 img{
+          width: 100%;
+          height: 100%;
+        }
+        .imgholder1 figcaption{
+          text-align: center;
+        }
+        .imgholder1 p{
+          text-align: center;
+        }
+        /* .cart{
+          background-color: #040303;
+          height: 15%;
+          width: 30%;
+          padding-top: 3%;
+          text-align: center;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          color: white;
+          border: solid black;
+          text-decoration: none;
+        } */
+        /* .cart:hover{
+          background-color: white;
+          color: black;
+        } */
+
+        .cart{
+          color: white;
+          border: black;
+          border-radius: 0px;
+          padding: 18px 36px;
+          display: inline-block;
+          font-family: var(--main-font);
+          font-size: 14px;
+          letter-spacing: 1px;
+          cursor: pointer;
+          box-shadow: inset 0 0 0 0 var(--primary-color);
+          -webkit-transition: ease-out 0.3s;
+          -moz-transition: ease-out 0.3s;
+          transition: ease-out 0.3s;
+          margin-left: auto;
+          text-decoration: none;
+          background-color: black;
+        }
+        .continueshopping{
+          color: white;
+          border: black;
+          border-radius: 0px;
+          padding: 18px 36px;
+          display: inline-block;
+          font-family: var(--main-font);
+          font-size: 14px;
+          letter-spacing: 1px;
+          cursor: pointer;
+          box-shadow: inset 0 0 0 0 var(--primary-color);
+          -webkit-transition: ease-out 0.2s;
+          -moz-transition: ease-out 0.2s;
+          transition: ease-out 0.2s;
+          margin-left: auto;
+          text-decoration: none;
+        }
+        .right-slide:hover {
+          box-shadow: inset 400px 0 0 0 var(--primary-color);
+        }
+        .modal{
+          position: fixed;
+          top: 0px;
+          right: 0px;
+          bottom: 0px;
+          left: 0px;
+          opacity: 0%;
+          background-color: rgba(0, 0, 0, 0.51);
+          z-index: 3;
+          pointer-events: none;
+        }
+        .modal:target{
+          opacity: 1;
+          pointer-events: auto;
+          transition: ease-in 0.2s;
+        }
+        .modaltext{
+
+          width: 400px;
+          height: 400px;
+          background-color: white;
+          left: 0px;
+          right: 0px;
+          margin-left: auto;
+          margin-right: auto;
+          position: relative;
+        }
+        .modalimg{
+          width: 50%;
+          height: 50%;
+        }
+        .price{
+          /* border: solid black; */
+          padding-left: 2%;
+          height: 50%;
+          width: 50%;
+          float: right;
+        }
+
+        /* Select section start  */
+        #select{
+          /* border: solid black; */
+          padding-top: 3%;
+          padding-bottom:3%;
+          padding-left: 3%;
+          padding-right: 12%;
+        }
+
+        /* Select section end */
+        #descriptionbrand{
+          font-size: 0.7em;
+        }
+        .description{
+          /* border: solid red; */
+          padding-left: 2%;
+          padding-right: 2%;
+          padding-top: 0.5%;
+          height: 19%;
+          width: 100%;
+          margin-bottom: 0%;
+          text-align: center;
+        }
+        .description p{
+          font-size: 0.9em;
+        }
+        #quantity{
+          font-size: 0.8em;
+          /* border: solid black; */
+          margin-bottom: 2%;
+        }
+        #ml{
+          font-size: 0.7em;
+        }
+        .totalandprice{
+          text-align: center;
+        }
+        .totalline,.priceline{
+          display: inline;
+          font-weight: bold;
+        }
+        .continueshopping{
+          text-align: center;
+          background-color: black;
+          display: block;
+          color: white;
+          width: 60%;
+          margin-left: auto;
+          margin-right: auto;
+          padding: 3%;
+          margin-top: 0%;
+          text-decoration: none;
+          /* border: solid black; */
+        }
+        .continueshopping:hover{
+          color: white;
+          filter: opacity(70%);
+
+        }
+        .modaltext h2{
+          /* background-color: grey; */
+          color: black;
+          width: 20%;
+          }
+        #close{
+          color: black;
+          width: 10%;
+          height: 10%;
+          position: absolute;
+          text-align: center;
+          top: 0%;
+          right: 0%;
+          text-decoration: none;
+          /* border: solid black; */
+          font-size: 1.3em;
+          -webkit-transition: ease-out 0.2s;
+          -moz-transition: ease-out 0.2s;
+          transition: ease-out 0.2s;
+        }
+        #close:hover{
+          color:rgb(82, 79, 79);
+          filter: opacity(70%);
+        }
+        .footer{
+          /* border: solid black; */
+          height: 380px;
+          width: 100%;
+          margin-top: 25%;
+          background-color: var(--secondary-color);
+          text-align: center;
+          padding-bottom: 7%;
+        }
+        #h, #a, #s, #c{
+          width: 25%;
+          height: 50%;
+          /* border: solid red; */
+          display: inline-block;
+          margin-bottom: 3%;
+          float: left;
+          text-align: center;
+        }
+        .footerheaders{
+          font-weight: bold;
+          color: white;
+        }
+        #h, #a, #s, #c{
+          color: white;
+        }
+
+        #h a{
+          text-decoration: none;
+          color: white;
+        }
+
+        #a a{
+          text-decoration: none;
+          color: white;
+        }
+
+        #h a:hover{
+          color: lightgrey;
+        }
+
+        #a a:hover{
+          color: lightgrey;
+        }
+        #s a{
+          text-decoration: none;
+          color: white;
+        }
+
+        #s a:hover{
+          color: lightgrey;
+        }
+
+        #c a{
+          text-decoration: none;
+          color: white;
+        }
+
+        #c a:hover{
+          color: lightgrey;
+        }
+
+        .line{
+          margin-top: 20px;
+          width: 98%;
+          height: 0.5%;
+          background-color: white;
+        }
+        .connectline{
+          margin-bottom: 0px;
+          margin-left: auto;
+          margin-right: auto;
+          /* border: solid black; */
+          width: 20%;
+          text-align: center;
+          display: inline-block;
+          color: white;
+        }
+        #connectcontainer{
+          /* border: solid black; */
+          height: 20%;
+          text-align: center;
+          width: 50%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        #fb, #twit, #pint, #insta, #whatsapp{
+          height: 40%;
+          width: 3%;
+          margin-left: 1%;
+          background-color: white;
+          border: solid white;
+          border-radius: 40px;
+        }
+
+        #copyright{
+          text-align: center;
+          font-size: 0.7em;
+          color: white;
+          background-color: var(--secondary-color);
+          margin-top: 37px;
+          /* border: solid red; */
+        }
+        #test{
+          border: solid red;
+          height: 100%;
+          margin-top: 20px;
+        }
+
+    </style>
+  </head>
+  <body>
+    <div class="slideshow">
+      <div class="slidewrapper">
+        <div class="slide" id="slide1">
+          <p>NEW Grime Remover and Color Booster Cleaner</p>
+        </div>
+        <div class="slide" id="slide2">
+          <p>Get 15% Off When You Sign Up Today!</p>
+        </div>
+        <div class="slide" id="slide3">
+          <p>Check Out the Latest Pics From New Wanders</p>
+        </div>
+      </div>
+    </div>
+    <!-- <header>
+      <a href="#" class="magicwandheadcont"><h1 class="magicwandhead">Wand Shoe Reviver</h1></a>
+      <div class="logocont">
+        <div class="Logo">
+          <img id="logoimg" src="/Users/mauriceaugust/Documents/Project 2/Wand_ccexpress.png" alt="Magic Wand Shoe Cleaner">
+        </div>
+      </div>
+      <div id="headercont"class="headerlinkscont">
+        <a href="#tools" class="headerlinks">New</a>
+        <a href="#clean" class="headerlinks">Cleaners</a>
+        <a href="#connectpart" class="headerlinks">Signup</a>
+      </div>
+    </header> -->
+    <div class="mainheaderdiv">
+      <div class="col" id="col1">
+        <a href="#tools" class="headerlinks">New</a>
+        <a href="#clean" class="headerlinks">Cleaners</a>
+        <a href="#connectpart" class="headerlinks">Signup</a>
+      </div>
+      <div class="col" id="col2">
+        <a href="#" id="col2text">Wand Shoe Reviver</a>
+        <figure class="imagecontainer">
+          <img src="/Users/mauriceaugust/Documents/Project 2/Wand_ccexpress.png" alt="">
+        </figure>
+      </div>
+      <div class="col" id="col3">
+        <figure class="usericoncont">
+          <img src="/Users/mauriceaugust/Documents/Project 2/2931147_user_face_avatar_account_head_icon.png" alt="">
+        </figure>
+        <figure class="usericoncont">
+          <img src="/Users/mauriceaugust/Documents/Project 2/2561381_search_icon.png" alt="">
+        </figure>
+        <figure class="usericoncont">
+          <img src="/Users/mauriceaugust/Documents/Project 2/2703085_bag_cart_ecommerce_shop_icon.png" alt="">
+        </figure>
+      </div>
+    </div>
+    <figure class="mainimg">
+      <img src="/Users/mauriceaugust/Documents/Project 2/leather-air_jordan_1-2-min_2048x-copy.jpeg" alt="Cleaning methods">
+      <p class="imgtext">To Scrub or Not to Scrub? Read more about this heated debate in the Wizard Circle.</p>
+    </figure>
+    <figure class="anotherimg">
+      <img src="/Users/mauriceaugust/Documents/Project 2/1489e901-49a2-42f5-8f5a-fa2afc73f369.92c49142211f2246ea56c38b805f46f1.jpeg" alt="Tools of the Trade">
+      <p id="tools"class="imgtext2">The Tools of the Trade - Get the ultimate kit now!</p>
+      <div class="overlay">
+
+      </div>
+    </figure>
+    <h1 id="clean"class="cleaners">Cleaners</h1>
+    <p class="cleanerp">Eco-friendly, concentrated cleaners for your most calling cleaning needs</p>
+    <div class="mainimgcontainer">
+      <div class="space1">
+        <figure id="one" class="imgholder1">
+          <img src="/Users/mauriceaugust/Documents/Project 2/Sole-Revive-PDP-1.jpeg" alt="Sole Reviver" id="solereviver" class="cartimg">
+          <figcaption class="itemfigcaption">Potion No.1 Gel</figcaption>
+          <p class="itemprice">$15</p>
+          <div class="slidecont">
+            <a href="#open" class="cart right-slide">ADD TO CART</a>
+          </div>
+        </figure>
+        <figure id="too" class="imgholder1">
+          <img src="/Users/mauriceaugust/Documents/Project 2/Wipes.jpeg" alt="Cleaning Wipes" id="wipes" class="cartimg">
+          <figcaption class="itemfigcaption">Potion No.1 Wipes</figcaption>
+          <p class="itemprice">$10</p>
+          <a href="#open" class="cart right-slide">ADD TO CART</a>
+        </figure>
+        <figure id="three" class="imgholder1">
+          <img src="/Users/mauriceaugust/Documents/Project 2/Cleaningrag.jpeg" alt="Cleaning Rag" id="rag" class="cartimg">
+          <figcaption class="itemfigcaption">Abracadamn Wrags</figcaption>
+          <p class="itemprice">$15</p>
+          <a href="#open" class="cart right-slide">ADD TO CART</a>
+        </figure>
+      </div>
+      <div class="space2">
+        <figure class="imgholder1">
+          <img src="/Users/mauriceaugust/Documents/Project 2/pwtw-bleach-1.jpeg" alt="Bleach" id="bleach" class="cartimg">
+          <figcaption class="itemfigcaption">Forbidden Spell Organic Bleach</figcaption>
+          <p class="itemprice">$30</p>
+          <a href="#open" class="cart right-slide">ADD TO CART</a>
+        </figure>
+        <figure  id="s2f2"class="imgholder1">
+          <img src="/Users/mauriceaugust/Documents/Project 2/Detergent.jpeg" alt="Detergent" id="detergent" class="cartimg">
+          <figcaption class="itemfigcaption">Spell Bomb Organic Detergent Packs </figcaption>
+          <p class="itemprice">$20</p>
+          <a href="#open" class="cart right-slide">ADD TO CART</a>
+        </figure>
+        <figure  id="s2f3"class="imgholder1">
+          <img src="/Users/mauriceaugust/Documents/Project 2/sneaker-laundry-bag.jpeg" alt="Laundry-Bag" id="lbag" class="cartimg">
+          <figcaption class="itemfigcaption">The Wands Keep Laundry Bag</figcaption>
+          <p class="itemprice">$15</p>
+          <a href="#open" class="cart right-slide">ADD TO CART</a>
+        </figure>
+      </div>
+    </div>
+    <div class="modal" id="open">
+      <form class="" action="project2checkout.html" method="get">
+        <div class="modaltext">
+          <h2>Cart</h2>
+          <hr>
+          <img class="modalimg" src="/Users/mauriceaugust/Documents/Project 2/Sole-Revive-PDP-1.jpeg" alt="Sole Reviver">
+          <div class="price">
+            <p id="descriptionbrand">Wand Shoe Reviver</p>
+
+            <h3 id="modalproducttitle">Potion no.1 Gel</h3>
+            <p id="ml">475ml</p>
+            <p id="quantity">Quantity</p>
+
+            <!-- Select section start -->
+            <select id="select">
+              <option value="1">1</option>
+              <!-- <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option> -->
+            </select>
+
+            <!-- Select section end -->
+            <br>
+            <hr>
+            <div class="totalandprice">
+              <p class="totalline">Subtotal(<span id="quantityspan">1</span> item):</p>
+              <p id="modalprice"class="priceline"></p>
+            </div>
+          </div>
+          <br>
+          <div class="description">
+            <p>A refreshing formula that cleanses and refreshes your shoes without stripping it of its natural fibers. 100% organic solution.</p>
+          </div>
+          <input type="submit" name="proceedtocheckout" value="Proceed to Checkout" class="continueshopping" onclick="sendinfo()">
+          <!-- <a href="#"class="continueshopping">Proceed to Checkout</a> -->
+          <a href="#"id="close">&#x2715;</a>
+        </div>
+      </form>
+    </div>
+    <footer class="footer" id="connectpart">
+      <div id="h" class="Help">
+        <a href="#" id="help"><p class="footerheaders">HELP</p></a>
+        <a href="#"><p>Customer Service</p></a>
+        <a href="#"><p>Live Chat</p></a>
+      </div>
+      <div id="a"class="Account">
+        <a href="#"><p class="footerheaders">ACCOUNT</p></a>
+        <a href="#"><p>Your Account</p></a>
+      </div>
+      <div id="s"class="Subscribe">
+        <a href="#"><p class="footerheaders">SUBSCRIBE</p></a>
+        <a href="#"><p>Email</p></a>
+        <a href="#"><p>Special Offers and Events</p></a>
+      </div>
+      <div id="c"class="membercard">
+        <a href="#"><p class="footerheaders">MEMBER CARD</p></a>
+        <a href="#"><p>Learn More</p></a>
+        <a href="#"><p>Pay My Bill</p></a>
+
+      </div>
+      <br>
+      <hr class="line">
+      <p class="connectline">Connect with Wand Shoe Reviver</p>
+      <br>
+      <br>
+      <br>
+      <div id="connectcontainer">
+        <a href="https://www.facebook.com/" target="_blank"><img id="fb"src="/Users/mauriceaugust/Documents/Project 2/353422_facebook_logo_icon.png" alt=""></a>
+        <a href="https://twitter.com/?lang=en" target="_blank"><img id="twit" src="/Users/mauriceaugust/Documents/Project 2/icons8-twitter-90.png" alt=""></a>
+        <a href="https://www.pinterest.com/" target="_blank"><img id="pint"src="/Users/mauriceaugust/Documents/Project 2/icons8-pinterest-100.png" alt=""></a>
+        <a href="https://www.instagram.com/" target="_blank"><img id="insta"src="/Users/mauriceaugust/Documents/Project 2/icons8-instagram-90.png" alt=""></a>
+        <a href="https://www.whatsapp.com/" target="_blank"><img id="whatsapp"src="/Users/mauriceaugust/Documents/Project 2/icons8-whatsapp-100.png" alt=""></a>
+      </div>
+
+      <p id="copyright">© 2022 Wand Shoe Reviver: by Maurice August. All Rights Reserved.</p>
+
+    </footer>
+
+  <script type="text/javascript" src="project2-2.js">
+  </script>
+  </body>
+</html>
